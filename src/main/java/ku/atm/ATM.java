@@ -23,7 +23,7 @@ public class ATM {
             currentAccount.withdraw(value);
 	}
 
-	public void deposit(double value) {
+	public void deposit(double value) throws NotEnoughBalanceException {
 		if (currentAccount != null)
             currentAccount.deposit(value);
 	}

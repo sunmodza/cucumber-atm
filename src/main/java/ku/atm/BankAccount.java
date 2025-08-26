@@ -11,7 +11,10 @@ public class BankAccount {
       this.balance = balance;
    }
  
-   public void deposit(double amount) {
+   public void deposit(double amount) throws NotEnoughBalanceException {
+      if (amount < 0 && Math.abs(amount) > balance) {
+         throw new NotEnoughBalanceException("cannot deposit negative amount more than balance");
+      }
       balance = balance + amount;
    }
 

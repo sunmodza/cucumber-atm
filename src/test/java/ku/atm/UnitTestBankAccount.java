@@ -18,7 +18,7 @@ public class UnitTestBankAccount {
     }
 
     @Test
-    void testDeposit() {
+    void testDeposit() throws NotEnoughBalanceException {
         account.deposit(50);
         assertEquals(150, account.getBalance());
     }
